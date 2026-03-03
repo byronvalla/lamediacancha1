@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>LaMediaCancha | Fútbol Chileno e Internacional</title>
+  <meta name="description" content="Noticias y resultados de fútbol chileno y ligas internacionales."/>
+  <meta name="theme-color" content="#e10600"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+  <div id="siteHeader"></div>
+  
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero__grid">
+        <article id="heroMain" class="card hero__main" style="--hero-img:url('')">
+          <div class="hero__kicker"><span class="pulse" aria-hidden="true"></span> PORTADA</div>
+          <h1 id="heroTitle" class="hero__title">—</h1>
+          <p id="heroDesc" class="hero__desc">—</p>
+          <div id="heroMeta" class="topstory__meta" style="margin-top:10px">—</div>
+          <div class="hero__cta">
+            <a id="heroBtn" class="btn btn--white" href="#">Leer ahora</a>
+            <a class="btn btn--live" href="en-vivo.html"><span class="blink" aria-hidden="true"></span> EN VIVO</a>
+          </div>
+        </article>
+
+        <aside class="card side">
+          <div class="side__head">
+            <h2 class="side__title">En portada</h2>
+            <span class="pill">Hoy</span>
+          </div>
+          <div id="topStory" class="topstory"></div>
+          <div class="divider"></div>
+          <div class="side__head">
+            <h2 class="side__title">Trending</h2>
+            <span class="pill">Top</span>
+          </div>
+          <div id="trendingList" class="trending"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="live">
+        <div class="live__head">
+          <div class="live__badge"><span class="blink" aria-hidden="true"></span> EN VIVO / HOY</div>
+          <a class="link" href="en-vivo.html">Ver todo →</a>
+        </div>
+        <div id="homeMatchList" class="matches__list"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">Fútbol Chileno</h2>
+        <a class="link" href="futbol-chileno.html">Ver más →</a>
+      </div>
+      <div id="gridChile" class="grid grid--3"></div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">Premier League</h2>
+        <a class="link" href="premier-league.html">Ver más →</a>
+      </div>
+      <div id="gridPremier" class="grid grid--3"></div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">LaLiga</h2>
+        <a class="link" href="la-liga.html">Ver más →</a>
+      </div>
+      <div id="gridLaLiga" class="grid grid--3"></div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">Champions</h2>
+        <a class="link" href="champions.html">Ver más →</a>
+      </div>
+      <div id="gridUCL" class="grid grid--3"></div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">Serie A</h2>
+        <a class="link" href="serie-a.html">Ver más →</a>
+      </div>
+      <div id="gridSerieA" class="grid grid--3"></div>
+    </section>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="assets/layout.js"></script>
+  <script src="assets/home.js"></script>
+</body>
+</html>
