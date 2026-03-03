@@ -1,0 +1,42 @@
+[
+  {
+    "time": "18:00",
+    "league": "Chile",
+    "venue": "Viña del Mar",
+    "home": "Everton",
+    "away": "Palestino",
+    "homeScore": "",
+    "awayScore": "",
+    "status": "Programado"
+  },
+  {
+    "time": "20:30",
+    "league": "Chile",
+    "venue": "Santiago",
+    "home": "Colo-Colo",
+    "away": "U. de Chile",
+    "homeScore": "1",
+    "awayScore": "0",
+    "status": "EN VIVO"
+  },
+  {
+    "time": "17:00",
+    "league": "Premier League",
+    "venue": "England",
+    "home": "Arsenal",
+    "away": "Liverpool",
+    "homeScore": "",
+    "awayScore": "",
+    "status": "Destacado"
+  },
+  {
+    "time": "21:00",
+    "league": "Champions",
+    "venue": "Europa",
+    "home": "Real Madrid",
+    "away": "PSG",
+    "homeScore": "",
+    "awayScore": "",
+    "status": "Programado"
+  }
+]

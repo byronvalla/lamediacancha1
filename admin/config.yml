@@ -1,0 +1,58 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "es"
+
+collections:
+  - name: "site"
+    label: "Sitio"
+    files:
+      - label: "Índice de Noticias (Portada y orden)"
+        name: "news_index"
+        file: "content/news-index.json"
+        format: "json"
+        fields:
+          - label: "Archivos (orden = más importante primero)"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.file}}"
+            fields:
+              - { label: "Archivo (ej: mi-noticia.json)", name: "file", widget: "string" }
+
+      - label: "Partidos / Marcadores"
+        name: "matches"
+        file: "content/matches.json"
+        format: "json"
+        fields:
+          - label: "Partidos"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Hora", name: "time", widget: "string", default: "20:00" }
+              - { label: "Competencia", name: "league", widget: "string", default: "Chile" }
+              - { label: "Lugar/Estadio", name: "venue", widget: "string", required: false }
+              - { label: "Local", name: "home", widget: "string" }
+              - { label: "Visita", name: "away", widget: "string" }
+              - { label: "Goles Local", name: "homeScore", widget: "string", required: false }
+              - { label: "Goles Visita", name: "awayScore", widget: "string", required: false }
+              - { label: "Estado", name: "status", widget: "string", default: "Programado" }
+
+  - name: "news"
+    label: "Noticias"
+    folder: "content/news"
+    create: true
+    format: "json"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumen (excerpt)", name: "excerpt", widget: "text" }
+      - { label: "Contenido", name: "content", widget: "text", required: false }
+      - { label: "Liga/Sección", name: "league", widget: "select", options: ["Fútbol Chileno","Premier League","LaLiga","Champions","Serie A"], default: "Fútbol Chileno" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+      - { label: "Tiempo de lectura", name: "readingTime", widget: "string", default: "2 min" }
+      - { label: "Imagen de portada (URL)", name: "coverImage", widget: "string", required: false }
+      - { label: "URL externa (opcional)", name: "url", widget: "string", required: false }
